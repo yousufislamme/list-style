@@ -1,0 +1,77 @@
+*{
+   margin: 0;
+   padding:0;
+   box-sizing: border-box;
+   border: none;
+   list-style: none;
+   
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+.box {
+   width: 400px;
+   height: 100px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   margin: 30px 0;
+   cursor: pointer;
+   transition: 0.5s ease-in-out;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.box::before{
+   content: '';
+   position: absolute;
+   width: 5px;
+   height: 100%;
+   background: #2e86de;
+   transition: 0.3s ease-in-out;
+}
+
+.box:hover::before{
+   width: 100%;
+}
+
+.box .icon {
+   width: 80px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.icon  ion-icon {
+   font-size: 2.1rem;
+}
+
+.content {
+   position: relative;
+}
+
+.box:hover .text,
+.box:hover .icon  ion-icon{
+   color: #fff;
+}
+.box:nth-child(1){
+   transform: translateX(-70px);
+}
+.box:nth-child(2){
+   transform: translateX(0px);
+}
+.box:nth-child(3){
+   transform: translateX(70px);
+}
+.container:hover:nth-child(1) .box,
+.container:hover:nth-child(2) .box,
+.container:hover:nth-child(3) .box{
+   transform: translateX(0);
+}
+
+ 
